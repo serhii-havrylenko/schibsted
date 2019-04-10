@@ -16,7 +16,6 @@ import * as React from 'react';
  */
 const FAQ: React.SFC = () => (
   <div>
-    <Typography variant="h3">FAQ</Typography>
     <Typography variant="h2">Used Tools and Libraries</Typography>
     <List component="nav">
       <ListItem>

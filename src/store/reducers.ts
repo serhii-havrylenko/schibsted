@@ -8,26 +8,31 @@ import { combineReducers, Reducer } from 'redux';
 import { ActionType } from 'typesafe-actions';
 
 import * as actions from './actions';
-import { WITHDRAW_AMOUNT } from './constants';
+import { TICKET_CREATE } from './constants';
 
 export type ActionTypes = ActionType<typeof actions>;
 
-export interface CacheMachineState {
-  amount?: number;
+export interface TicketsState {
+  title?: string;
+  description?: string;
 }
 
 export interface State {
-  cacheMachine: CacheMachineState;
+  tickets: TicketsState;
   router: RouterState;
 }
 
-export const cacheMachineReducer: Reducer<CacheMachineState, ActionTypes> = (
+export const cacheMachineReducer: Reducer<TicketsState, ActionTypes> = (
   state = {},
   action,
 ) => {
   switch (action.type) {
-    case WITHDRAW_AMOUNT:
-      return { ...state, amount: action.payload.amount };
+    case TICKET_CREATE:
+      return {
+        ...state,
+        title: action.payload.title,
+        description: action.payload.description,
+      };
 
     default:
       return state;
@@ -41,5 +46,5 @@ export const cacheMachineReducer: Reducer<CacheMachineState, ActionTypes> = (
 export default (history: History) =>
   combineReducers<State>({
     router: connectRouter(history),
-    cacheMachine: cacheMachineReducer,
+    tickets: cacheMachineReducer,
   });

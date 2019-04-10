@@ -1,6 +1,8 @@
 import { action } from 'typesafe-actions';
 
-import { WITHDRAW_AMOUNT } from './constants';
+import { TICKET_CREATE } from './constants';
 
-export const withdrawAmount = (amount: number) =>
-  action(WITHDRAW_AMOUNT, { amount });
+export const withdrawAmount = (payload: {
+  title: string;
+  description: string;
+}) => action(TICKET_CREATE, payload);

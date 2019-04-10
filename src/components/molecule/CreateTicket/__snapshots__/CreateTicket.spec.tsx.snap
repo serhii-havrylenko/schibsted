@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateTicket /> tests should match snapshot with error in description 1`] = `
+<WithStyles(Card)>
+  <Styled(WithStyles(CardContent))>
+    <TextField
+      inputRef={
+        Object {
+          "current": null,
+        }
+      }
+      label="Title"
+      margin="dense"
+      required={true}
+      select={false}
+      type="text"
+      variant="standard"
+    />
+    <TextField
+      error={true}
+      helperText="This field is required"
+      inputRef={
+        Object {
+          "current": null,
+        }
+      }
+      label="Description"
+      margin="dense"
+      multiline={true}
+      required={true}
+      rows={5}
+      select={false}
+      type="text"
+      variant="standard"
+    />
+  </Styled(WithStyles(CardContent))>
+  <WithStyles(CardActions)>
+    <Button
+      onClick={[MockFunction]}
+    >
+      Create
+    </Button>
+  </WithStyles(CardActions)>
+</WithStyles(Card)>
+`;
+
+exports[`<CreateTicket /> tests should match snapshot with error in title 1`] = `
+<WithStyles(Card)>
+  <Styled(WithStyles(CardContent))>
+    <TextField
+      error={true}
+      helperText="This field is required"
+      inputRef={
+        Object {
+          "current": null,
+        }
+      }
+      label="Title"
+      margin="dense"
+      required={true}
+      select={false}
+      type="text"
+      variant="standard"
+    />
+    <TextField
+      inputRef={
+        Object {
+          "current": null,
+        }
+      }
+      label="Description"
+      margin="dense"
+      multiline={true}
+      required={true}
+      rows={5}
+      select={false}
+      type="text"
+      variant="standard"
+    />
+  </Styled(WithStyles(CardContent))>
+  <WithStyles(CardActions)>
+    <Button
+      onClick={[MockFunction]}
+    >
+      Create
+    </Button>
+  </WithStyles(CardActions)>
+</WithStyles(Card)>
+`;
+
+exports[`<CreateTicket /> tests should match snapshot without errors 1`] = `
+<WithStyles(Card)>
+  <Styled(WithStyles(CardContent))>
+    <TextField
+      inputRef={
+        Object {
+          "current": null,
+        }
+      }
+      label="Title"
+      margin="dense"
+      required={true}
+      select={false}
+      type="text"
+      variant="standard"
+    />
+    <TextField
+      inputRef={
+        Object {
+          "current": null,
+        }
+      }
+      label="Description"
+      margin="dense"
+      multiline={true}
+      required={true}
+      rows={5}
+      select={false}
+      type="text"
+      variant="standard"
+    />
+  </Styled(WithStyles(CardContent))>
+  <WithStyles(CardActions)>
+    <Button
+      onClick={[MockFunction]}
+    >
+      Create
+    </Button>
+  </WithStyles(CardActions)>
+</WithStyles(Card)>
+`;

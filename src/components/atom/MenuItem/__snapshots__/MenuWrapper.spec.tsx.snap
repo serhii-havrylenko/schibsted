@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuItem /> tests should match snapshot 1`] = `
+.c0.c0 {
+  color: #fff;
+}
+
+<Styled(MenuItem)>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": true,
+          "lastClassName": "c0",
+          "rules": Array [
+            "
+  && {
+    color: #fff;
+  }
+",
+          ],
+        },
+        "displayName": "Styled(MenuItem)",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": [Function],
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <MenuItem
+      className="c0"
+    >
+      <WithStyles(Typography)
+        className="c0"
+        color="inherit"
+        noWrap={false}
+        variant="h6"
+      />
+    </MenuItem>
+  </StyledComponent>
+</Styled(MenuItem)>
+`;
