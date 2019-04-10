@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "esnext",
+    "target": "esnext",
+    "sourceMap": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "lib": ["es6", "dom", "esnext"],
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"],
+      "#atom/*": ["src/components/atom/*"],
+      "#molecule/*": ["src/components/molecule/*"],
+      "#organism/*": ["src/components/organism/*"],
+      "#pages/*": ["src/components/pages/*"],
+      "#pages": ["src/components/pages"],
+      "#template/*": ["src/components/template/*"],
+      "#constants/*": ["src/constants/*"],
+      "#containers/*": ["src/containers/*"],
+      "#components/*": ["src/components/*"],
+      "#public/*": ["public/*"],
+      "#server": ["src/server/*"],
+      "#store": ["src/store"],
+      "#store/*": ["src/store/*"],
+      "#hoc/*": ["src/hoc/*"],
+      "#env": ["src/environment"],
+      "#app/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules", "**/node_modules/*"],
+  "include": ["src/**/*"],
+  "awesomeTypescriptLoaderOptions": {
+    "useCache": false,
+    "useBabel": true,
+    "babelCore": "@babel/core",
+    "forceIsolatedModules": true
+  }
+}
