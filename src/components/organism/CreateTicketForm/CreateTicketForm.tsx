@@ -1,8 +1,9 @@
 import CreateTicket from '#molecule/CreateTicket';
 import { withdrawAmount } from '#store/actions';
-import { getOr } from 'lodash/fp';
 import * as React from 'react';
 import { connect } from 'react-redux';
+
+import { getValueFromRef } from './utils';
 
 export interface CreateTicketFormProps {
   onCreateClick: (payload: { title: string; description: string }) => void;
@@ -11,10 +12,6 @@ export interface CreateTicketFormState {
   titleError: boolean;
   descriptionError: boolean;
 }
-
-const getValueFromRef = (getOr(null, 'current.value') as unknown) as (
-  ref: React.RefObject<HTMLInputElement>,
-) => string | null;
 
 export class CreateTicketForm extends React.Component<
   CreateTicketFormProps,

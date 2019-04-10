@@ -1,12 +1,30 @@
 import { GraphQLFieldResolver } from 'graphql';
 
-export const helloResolver: GraphQLFieldResolver<{}, {}, { foo?: string }> = (
-  _,
-  { foo },
-) => `${foo} bar`;
+import { CreateTicketArgs, UpdateTicketArgs } from './types';
+
+import { createTicket, getAllTickets, updateTicket } from './tickets';
+
+export const helloResolver: GraphQLFieldResolver<{}, {}, {}> = () =>
+  getAllTickets();
+
+export const createTicketMutation: GraphQLFieldResolver<
+  {},
+  {},
+  CreateTicketArgs
+> = (_, { ticket }) => createTicket(ticket);
+
+export const updateTicketMutation: GraphQLFieldResolver<
+  {},
+  {},
+  UpdateTicketArgs
+> = (_, { where, with: withArgs }) => updateTicket(where, withArgs);
 
 export const resolvers: { [key: string]: any } = {
   Query: {
-    hello: helloResolver,
+    tickets: helloResolver,
+  },
+  Mutation: {
+    createTicket: createTicketMutation,
+    updateTicket: updateTicketMutation,
   },
 };
