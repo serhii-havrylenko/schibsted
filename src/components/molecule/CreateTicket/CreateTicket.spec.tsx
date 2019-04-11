@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme';
 import * as React from 'react';
 
+import Button from '#atom/Button';
 import CreateTicket, { CreateTicketProps } from './CreateTicket';
 
 describe('<CreateTicket /> tests', () => {
@@ -11,17 +12,33 @@ describe('<CreateTicket /> tests', () => {
   };
 
   test('should match snapshot without errors', () => {
-    const tree = shallow(<CreateTicket {...props} />);
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(<CreateTicket {...props} />);
+    expect(wrapper).toMatchSnapshot();
   });
 
   test('should match snapshot with error in title', () => {
-    const tree = shallow(<CreateTicket {...props} titleError={true} />);
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(<CreateTicket {...props} titleError={true} />);
+    expect(wrapper).toMatchSnapshot();
   });
 
   test('should match snapshot with error in description', () => {
-    const tree = shallow(<CreateTicket {...props} descriptionError={true} />);
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(
+      <CreateTicket {...props} descriptionError={true} />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('should call onCreateClick when create clicked', () => {
+    const clickMock = jest.fn();
+    const wrapper = shallow(
+      <CreateTicket {...props} onCreateClick={clickMock} />,
+    );
+
+    wrapper
+      .find(Button)
+      .first()
+      .simulate('click');
+
+    expect(clickMock).toHaveBeenCalledTimes(1);
   });
 });

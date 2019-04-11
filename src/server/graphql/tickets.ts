@@ -1,5 +1,6 @@
-import { findIndex, uniqueId } from 'lodash/fp';
+import uniqueId from 'lodash/fp/uniqueId';
 
+import { TICKET_ID_PREFIX } from './constants';
 import {
   CreateTicketArgs,
   Ticket,
@@ -18,7 +19,7 @@ export const createTicket = (
   const newTicket: Ticket = {
     title,
     description,
-    id: uniqueId('REQ-'),
+    id: uniqueId(TICKET_ID_PREFIX),
     status: TicketStatus.Open,
   };
 
@@ -28,11 +29,15 @@ export const createTicket = (
 };
 
 export const updateTicket = (
-  where: UpdateTicketArgs['where'],
+  { id }: UpdateTicketArgs['where'],
   withArgs: UpdateTicketArgs['with'],
   allTickets = tickets,
 ) => {
-  const index = findIndex(where, allTickets);
+  const index = allTickets.findIndex((ticket) => ticket.id === id);
+
+  if (index === -1) {
+    return null;
+  }
 
   allTickets[index] = {
     ...allTickets[index],

@@ -2,40 +2,23 @@ import { withStyles } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import * as React from 'react';
 
 import Button from '#atom/Button';
+import TableCellStyled from '#atom/TableCellStyled';
 import { Ticket } from '#components/types';
 import { getNextStatus } from './utils';
 
-const TableCellStyled = withStyles(() => ({
-  head: {
-    backgroundColor: '#65a1ec',
-    color: '#fff',
-  },
-  body: {
-    fontSize: 14,
-    whiteSpace: 'pre',
-    '&:first-child': {
-      whiteSpace: 'nowrap',
-    },
-  },
-}))(TableCell);
-
 export interface TicketsProps {
   tickets: Ticket[];
-  classes: { root: string; row: string };
   onUpdateClick: (ticket: Ticket) => void;
 }
 
-const Tickets: React.SFC<TicketsProps> = ({
-  tickets,
-  classes,
-  onUpdateClick,
-}) => (
+const Tickets: React.SFC<
+  TicketsProps & { classes: { root: string; row: string } }
+> = ({ tickets, classes, onUpdateClick }) => (
   <Paper className={classes.root}>
     <Table>
       <TableHead>

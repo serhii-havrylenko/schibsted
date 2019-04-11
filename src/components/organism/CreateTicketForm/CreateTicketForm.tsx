@@ -3,13 +3,13 @@ import * as React from 'react';
 import CreateTicket from '#molecule/CreateTicket';
 import { CREATE_TICKET_QUERY } from '#queries';
 
+import { CreateTicketQueryVariables } from '#components/types';
 import { getValueFromRef, updateCacheWithNew } from '#components/utils';
 import { CreateTicketQuery } from './CreateTicketQuery';
+import { createHandler } from './utils';
 
 export interface CreateTicketFormProps {
-  onCreateClick: (options: {
-    variables: { title: string; description: string };
-  }) => void;
+  onCreateClick: (payload: CreateTicketQueryVariables) => void;
 }
 
 export interface CreateTicketFormState {
@@ -61,12 +61,12 @@ export class CreateTicketForm extends React.Component<
       return;
     }
 
-    this.props.onCreateClick({ variables: { title, description } });
+    this.props.onCreateClick({ title, description });
   };
 }
 
 export default () => (
   <CreateTicketQuery mutation={CREATE_TICKET_QUERY} update={updateCacheWithNew}>
-    {(create) => <CreateTicketForm onCreateClick={create} />}
+    {(create) => <CreateTicketForm onCreateClick={createHandler(create)} />}
   </CreateTicketQuery>
 );

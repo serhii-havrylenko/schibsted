@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableCellStyled /> tests should match snapshot for body cell 1`] = `
+<WithStyles(Table)>
+  <Table
+    classes={
+      Object {
+        "root": "MuiTable-root-1",
+      }
+    }
+    component="table"
+    padding="default"
+  >
+    <table
+      className="MuiTable-root-1"
+    >
+      <WithStyles(TableBody)>
+        <TableBody
+          classes={
+            Object {
+              "root": "MuiTableBody-root-22",
+            }
+          }
+          component="tbody"
+        >
+          <tbody
+            className="MuiTableBody-root-22"
+          >
+            <WithStyles(TableRow)>
+              <TableRow
+                classes={
+                  Object {
+                    "footer": "MuiTableRow-footer-7",
+                    "head": "MuiTableRow-head-6",
+                    "hover": "MuiTableRow-hover-5",
+                    "root": "MuiTableRow-root-3",
+                    "selected": "MuiTableRow-selected-4",
+                  }
+                }
+                component="tr"
+                hover={false}
+                selected={false}
+              >
+                <tr
+                  className="MuiTableRow-root-3"
+                >
+                  <WithStyles(WithStyles(TableCell))>
+                    <WithStyles(TableCell)
+                      classes={
+                        Object {
+                          "body": "WithStyles-TableCell--body-9",
+                          "head": "WithStyles-TableCell--head-8",
+                        }
+                      }
+                    >
+                      <TableCell
+                        align="inherit"
+                        classes={
+                          Object {
+                            "alignCenter": "MuiTableCell-alignCenter-19",
+                            "alignJustify": "MuiTableCell-alignJustify-21",
+                            "alignLeft": "MuiTableCell-alignLeft-18",
+                            "alignRight": "MuiTableCell-alignRight-20",
+                            "body": "MuiTableCell-body-12 WithStyles-TableCell--body-9",
+                            "footer": "MuiTableCell-footer-13",
+                            "head": "MuiTableCell-head-11 WithStyles-TableCell--head-8",
+                            "numeric": "MuiTableCell-numeric-14",
+                            "paddingCheckbox": "MuiTableCell-paddingCheckbox-16",
+                            "paddingDense": "MuiTableCell-paddingDense-15",
+                            "paddingNone": "MuiTableCell-paddingNone-17",
+                            "root": "MuiTableCell-root-10",
+                          }
+                        }
+                      >
+                        <td
+                          aria-sort={null}
+                          className="MuiTableCell-root-10 MuiTableCell-body-12 WithStyles-TableCell--body-9"
+                        >
+                          Cell
+                        </td>
+                      </TableCell>
+                    </WithStyles(TableCell)>
+                  </WithStyles(WithStyles(TableCell))>
+                </tr>
+              </TableRow>
+            </WithStyles(TableRow)>
+          </tbody>
+        </TableBody>
+      </WithStyles(TableBody)>
+    </table>
+  </Table>
+</WithStyles(Table)>
+`;
+
+exports[`<TableCellStyled /> tests should match snapshot for head cell 1`] = `
+<WithStyles(Table)>
+  <Table
+    classes={
+      Object {
+        "root": "MuiTable-root-1",
+      }
+    }
+    component="table"
+    padding="default"
+  >
+    <table
+      className="MuiTable-root-1"
+    >
+      <WithStyles(TableHead)>
+        <TableHead
+          classes={
+            Object {
+              "root": "MuiTableHead-root-2",
+            }
+          }
+          component="thead"
+        >
+          <thead
+            className="MuiTableHead-root-2"
+          >
+            <WithStyles(TableRow)>
+              <TableRow
+                classes={
+                  Object {
+                    "footer": "MuiTableRow-footer-7",
+                    "head": "MuiTableRow-head-6",
+                    "hover": "MuiTableRow-hover-5",
+                    "root": "MuiTableRow-root-3",
+                    "selected": "MuiTableRow-selected-4",
+                  }
+                }
+                component="tr"
+                hover={false}
+                selected={false}
+              >
+                <tr
+                  className="MuiTableRow-root-3 MuiTableRow-head-6"
+                >
+                  <WithStyles(WithStyles(TableCell))>
+                    <WithStyles(TableCell)
+                      classes={
+                        Object {
+                          "body": "WithStyles-TableCell--body-9",
+                          "head": "WithStyles-TableCell--head-8",
+                        }
+                      }
+                    >
+                      <TableCell
+                        align="inherit"
+                        classes={
+                          Object {
+                            "alignCenter": "MuiTableCell-alignCenter-19",
+                            "alignJustify": "MuiTableCell-alignJustify-21",
+                            "alignLeft": "MuiTableCell-alignLeft-18",
+                            "alignRight": "MuiTableCell-alignRight-20",
+                            "body": "MuiTableCell-body-12 WithStyles-TableCell--body-9",
+                            "footer": "MuiTableCell-footer-13",
+                            "head": "MuiTableCell-head-11 WithStyles-TableCell--head-8",
+                            "numeric": "MuiTableCell-numeric-14",
+                            "paddingCheckbox": "MuiTableCell-paddingCheckbox-16",
+                            "paddingDense": "MuiTableCell-paddingDense-15",
+                            "paddingNone": "MuiTableCell-paddingNone-17",
+                            "root": "MuiTableCell-root-10",
+                          }
+                        }
+                      >
+                        <th
+                          aria-sort={null}
+                          className="MuiTableCell-root-10 MuiTableCell-head-11 WithStyles-TableCell--head-8"
+                          scope="col"
+                        >
+                          Cell
+                        </th>
+                      </TableCell>
+                    </WithStyles(TableCell)>
+                  </WithStyles(WithStyles(TableCell))>
+                </tr>
+              </TableRow>
+            </WithStyles(TableRow)>
+          </thead>
+        </TableHead>
+      </WithStyles(TableHead)>
+    </table>
+  </Table>
+</WithStyles(Table)>
+`;

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardContentWrapper /> tests should match snapshot and styles 1`] = `
+.c0.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<Styled(WithStyles(CardContent))>
+  <StyledComponent
+    forwardedComponent={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "children": "Content",
+              "className": "sc-bdVaJa c0",
+            },
+            Object {
+              "64a55d578f856d258dc345b094a2a2b3": undefined,
+              "6fc570d6bd61383819d0f9e7407c452d": undefined,
+              "__THEMING__": undefined,
+              "d4bd0baacbc52bbd48bbb9eb24344ecd": undefined,
+              "muiThemeProviderOptions": undefined,
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    forwardedRef={null}
+  >
+    <WithStyles(CardContent)
+      className="c0"
+    />
+  </StyledComponent>
+</Styled(WithStyles(CardContent))>
+`;

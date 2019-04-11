@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateTicketForm /> tests should match snapshot without errors 1`] = `
+<CreateTicket
+  descriptionError={false}
+  descriptionRef={
+    Object {
+      "current": null,
+    }
+  }
+  onCreateClick={[Function]}
+  titleError={false}
+  titleRef={
+    Object {
+      "current": null,
+    }
+  }
+/>
+`;

@@ -8,6 +8,10 @@ module.exports = {
     '\\.(png|jpg|svg|woff|woff2|ico|css|scss)$':
       '<rootDir>/test/setup/file-mock.ts',
     '#atom/(.*)$': '<rootDir>/src/components/atom/$1',
+    '#molecule/(.*)$': '<rootDir>/src/components/molecule/$1',
+    '#queries$': '<rootDir>/src/components/queries',
+    '#queries/(.*)$': '<rootDir>/src/components/queries/$1',
+    '#components/(.*)$': '<rootDir>/src/components/$1',
   },
   setupFiles: ['<rootDir>/test/shim.ts'],
   setupFilesAfterEnv: ['<rootDir>/test/enzyme.ts'],
