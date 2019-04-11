@@ -1,15 +1,14 @@
-# Developx challenge
+# Schibsted challenge
 
 ## Pre-requirements
 
 This application is written in TypeScript + babel7 and should be started by NodeJS and Yarn:
 
-| App/Lib    | Version      |
-| ---------- | ------------ |
-| NodeJs     | LTS (8.12.0) |
-| Yarn       | >= 1.9.0     |
-| TypeScript | >= 3.0.0     |
-
+| App/Lib    | Version     |
+| ---------- | ----------- |
+| NodeJs     | LTS (10.15) |
+| Yarn       | >= 1.10.0   |
+| TypeScript | >= 3.4.0    |
 
 ## How to start
 
@@ -27,7 +26,7 @@ yarn
 yarn start
 ```
 
-Wait until application starts (usually it takes 20-30 seconds) and it will be available on `http://localhost:9000`
+Wait until application starts (usually it takes around 10-20 seconds on first start) and it will be available on `http://localhost:9000`. Graphql playground is available on `http://localhost:9000/api/graphql`
 
 ## Storybook
 
