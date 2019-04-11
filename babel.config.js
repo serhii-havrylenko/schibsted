@@ -2,6 +2,7 @@ module.exports = (env) => {
   env.cache(true);
 
   return {
+    sourceType: 'unambiguous',
     presets: [
       '@babel/typescript',
       [

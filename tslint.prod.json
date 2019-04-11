@@ -16,7 +16,8 @@
         "#pages",
         "#public",
         "#store",
-        "#template"
+        "#template",
+        "#queries"
       ]
     ]
   }

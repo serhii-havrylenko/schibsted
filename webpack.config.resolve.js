@@ -16,6 +16,7 @@ module.exports = {
       '#containers': path.join(__dirname, 'src/containers'),
       '#env': path.join(__dirname, 'src/environment'),
       '#hoc': path.join(__dirname, 'src/hoc'),
+      '#queries': path.join(__dirname, 'src/components/queries'),
       '#molecule': path.join(__dirname, 'src/components/molecule'),
       '#organism': path.join(__dirname, 'src/components/organism'),
       '#pages': path.join(__dirname, 'src/components/pages'),

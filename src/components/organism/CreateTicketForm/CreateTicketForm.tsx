@@ -1,13 +1,17 @@
-import CreateTicket from '#molecule/CreateTicket';
-import { withdrawAmount } from '#store/actions';
 import * as React from 'react';
-import { connect } from 'react-redux';
 
-import { getValueFromRef } from './utils';
+import CreateTicket from '#molecule/CreateTicket';
+import { CREATE_TICKET_QUERY } from '#queries';
+
+import { getValueFromRef, updateCacheWithNew } from '#components/utils';
+import { CreateTicketQuery } from './CreateTicketQuery';
 
 export interface CreateTicketFormProps {
-  onCreateClick: (payload: { title: string; description: string }) => void;
+  onCreateClick: (options: {
+    variables: { title: string; description: string };
+  }) => void;
 }
+
 export interface CreateTicketFormState {
   titleError: boolean;
   descriptionError: boolean;
@@ -57,11 +61,12 @@ export class CreateTicketForm extends React.Component<
       return;
     }
 
-    this.props.onCreateClick({ title, description });
+    this.props.onCreateClick({ variables: { title, description } });
   };
 }
 
-export default connect(
-  undefined,
-  { onCreateClick: withdrawAmount },
-)(CreateTicketForm);
+export default () => (
+  <CreateTicketQuery mutation={CREATE_TICKET_QUERY} update={updateCacheWithNew}>
+    {(create) => <CreateTicketForm onCreateClick={create} />}
+  </CreateTicketQuery>
+);

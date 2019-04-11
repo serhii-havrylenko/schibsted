@@ -26,6 +26,8 @@
       "#pages/*": ["src/components/pages/*"],
       "#pages": ["src/components/pages"],
       "#template/*": ["src/components/template/*"],
+      "#queries": ["src/components/queries"],
+      "#queries/*": ["src/components/queries/*"],
       "#constants/*": ["src/constants/*"],
       "#containers/*": ["src/containers/*"],
       "#components/*": ["src/components/*"],

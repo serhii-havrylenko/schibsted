@@ -22,7 +22,7 @@ export interface State {
   router: RouterState;
 }
 
-export const cacheMachineReducer: Reducer<TicketsState, ActionTypes> = (
+export const ticketsReducer: Reducer<TicketsState, ActionTypes> = (
   state = {},
   action,
 ) => {
@@ -46,5 +46,5 @@ export const cacheMachineReducer: Reducer<TicketsState, ActionTypes> = (
 export default (history: History) =>
   combineReducers<State>({
     router: connectRouter(history),
-    tickets: cacheMachineReducer,
+    tickets: ticketsReducer,
   });
